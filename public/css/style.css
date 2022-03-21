@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
+* { font-family: "Rubik", sans-serif; }
+body,html {height: 100%;}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background-color: hsl(226, 43%, 10%);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+}
+button {
+    display: block;
+    background: none;  
+    border: none;
+    color: hsl(235, 45%, 61%);
+    font-size: 18px;
+    font-weight: 300;
+    margin: 1rem 2rem;
+}
+button:hover {
+    cursor: pointer;
+    color: #fff;
+}
+button:focus { color: #fff; outline: 1px solid hsl(235, 46%, 20%);}
+h1 { font-weight: 300; }
+h2 {
+    font-size: 20px;
+    font-weight: 400;
+}
+p {
+    font-size: 16px;
+    color: hsl(236, 100%, 87%);
+}
+.activity { 
+    position: relative; 
+    overflow: hidden;
+    height: 14.5rem;
+} 
+.activity, .content, .person, .profile {
+    border-radius: 15px;
+}
+.attribution { font-size: 11px; text-align: center; margin-top: 0.5rem;}
+.attribution a { color: hsl(235, 45%, 61%); }
+.avatar {
+    width: 74px;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    background-color: #fff;
+    margin: 0 1rem 1.5rem 0;
+}
+.content { 
+    position: absolute; 
+    width: 100%;
+    bottom: 0;
+    background-color: hsl(235, 46%, 20%);
+    padding: 0.75rem 1.75rem;
+    box-sizing: border-box;
+}
+.content:hover {
+    background-color: hsl(233, 24%, 34%);
+    cursor: pointer;
+}
+.container {
+    display: grid;
+    grid-template-columns: 15rem 15rem 15rem 15rem;
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+.current {
+    font-size: 48px;
+    margin: 1.5rem 0 0;
+}
+.elipsis {
+    position: absolute;
+    right: 1.75rem;
+    top: 2.35rem;
+}
+.elipsis:hover {
+    cursor: pointer;
+    filter: brightness(0) invert(1);
+}
+.exercise { background-color: hsl(145, 58%, 55%); }
+.icon {
+    width: 4rem; 
+    position: absolute;
+    right: 16px; 
+    top: -6px;
+}
+.name {
+    font-size: 40px;
+    margin: 0 0 2.5rem;
+}
+.person {
+    grid-row: 1/span 2;
+    background-color: hsl(235, 46%, 20%);
+}
+.play { background-color: hsl(195, 74%, 62%); }
+.previous { margin-top: 0.5rem; }
+.profile {
+    background-color: hsl(246, 80%, 60%);
+    padding: 2rem;
+}
+.profile p { margin-bottom: 0.25rem;}
+.self-care { background-color: hsl(43, 84%, 65%); }
+.social { background-color: hsl(264, 64%, 52%); }
+.study { background-color: hsl(348, 100%, 68%); }
+.work { background-color: hsl(15, 100%, 70%); }
+
+@media screen and (max-width: 1100px) {
+    body, html { height: auto; }
+    body { margin: 2rem 5%; }
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+    .container { grid-template-columns: 15rem 15rem 15rem; }
+    .person {
+        grid-row: 1;
+        grid-column: 1/ span 3;
+    }
+    .avatar { float: left; }
+    .name { 
+        font-size: 32px;
+        margin: 0 0 0.5rem;
+    }
+    .profile { padding: 2.5rem; }
+    .profile p { margin: 0.5rem 0 0.25rem; }
+}
+@media screen and (max-width: 860px) {
+    .container { grid-template-columns: 15rem 15rem; }
+    .person {
+        grid-row: 1;
+        grid-column: 1/ span 2;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    body { display: block; }
+    h2 { margin-bottom: 0.5rem;}
+    .activity { height: 11.5rem;}
+    .container { grid-template-columns: auto; }
+    .current { margin: 0;}
+    .person { grid-column: 1;}
+    .previous { margin: 0;}
+    .time { 
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+    }
+}
